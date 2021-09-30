@@ -2,33 +2,38 @@
 @import url("https://fonts.googleapis.com/css?family=Hepta+Slab|Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
+
 /* Styling Variables */
 :root {
   --accent-color: #555;
-  --body-typeface: "Rubik", sans-serif;
-  --main-heading: "Staatliches", cursive;
-  --gradient: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+  --body-typeface: 'Nunito Sans', sans-serif;
+  --main-heading: 'Barlow', sans-serif, thin;
+  --gradient: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706);
 }
 
 
 body {
   font-family: var(--body-typeface);
-  color: black;
+  color: rgb(221, 221, 221);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 
 
 /* Making all images responsive */
@@ -36,36 +41,111 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-
 /* Typography */
 
 h1 {
   font-size: 6em;
   font-family: var(--main-heading);
   margin-bottom: .2em;
+  color: white;
 }
 
 .hero-headline {
-color: white;
+  color: white;
 }
 
 /* Hyperlink Styles */
 a {
   text-decoration: none;
-  color: #444;
-}
-a:hover {
-  color: #111;
+  color: rgb(49, 49, 49);
 }
 
-p {margin-bottom: 1em;}
+a:hover {
+  color: rgb(8, 189, 189);
+}
+
+.scroll-text {
+  color:#14838a;
+}
+
+p {
+  margin-bottom: 1em;
+}
 
 
 
 /* Work Page Layout */
 
 
+.work-wrapper {
+  flex: 1;
+}
+
+.portfolio {
+  padding: 1rem;
+}
+
+/* Defining the work page grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-gap: 1rem;
+  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
+}
+
+
+.hero-footer {
+  color: white;
+}
+
+.main-footer {
+  min-height: 100vh;
+  background: #111;
+}
+
+.hero-footer,
+.main-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+}
+/* Hero */
+
+
+
+.branding-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
+}
+
+.logo {
+  width: 3em;
+}
+
+.hero-headline-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 8em;
+  text-align: center;
+}
+
+.hero-headline {
+  font-size: 3em;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+}
 
 /* Hero */
 
@@ -78,9 +158,16 @@ p {margin-bottom: 1em;}
   animation: bg-animation 120s infinite alternate;
 }
 
+
+
 @keyframes bg-animation {
-  0% {background-position: 0%;}
-  100% {background-position: 100%;}
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 100%;
+  }
 }
 
 
@@ -93,3 +180,41 @@ p {margin-bottom: 1em;}
   text-align: center;
 }
 
+
+/* Project Page */
+
+.project-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background: #111;
+  padding: 1em;
+}
+
+.project-aside {
+  width: 35vw;
+  height: 40vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5vh;
+  color: white;
+  padding: 1em;
+}
+
+.project-navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.arrow {
+  padding-right: 1em;
+}
+
+.project-details {
+  width: 60vw;
+  min-height: 410vh;
+  background-image: linear-gradient(-225deg,
+      #d1ddee 0%,
+      #3c4280 50%,
+      #0d0a27 100%);
+  padding: 1em;
+}
