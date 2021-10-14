@@ -189,13 +189,13 @@ li {
   height: 100vh;
   background-image: url(./assets/header/3-hand.png),
     url(./assets/header/4-sparkle.png),
-    url(./assets/header/2-person.png),
+    url(./assets/header/2-person-v2.png),
     url(./assets/header/1-stars-only.png),
     url(./assets/header/1-back-no-star.jpg);
     
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 85%, 85%, 85%, 110%, 110%;
+  background-size: 90%, 85%, 70%, 110%, 110%;
 }
 
 .header-icon {

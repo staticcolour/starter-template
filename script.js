@@ -10,9 +10,9 @@
         let _mouseY = e.clientY;
         let _depth1 = `${50 - (_mouseX - _w) * 0.00}% ${50 - (_mouseY - _h) * 0.00}%`;
         let _depth2 = `${50 - (_mouseX - _w) * 0.003}% ${50 - (_mouseY - _h) * 0.003}%`;
-        let _depth3 = `${125 - (_mouseX - _w) * 0.01}% ${25 - (_mouseY - _h) * 0.01}%`;
-        let _depth4 = `${110 - (_mouseX - _w) * 0.02}% ${110 - (_mouseY - _h) * 0.07}%`;
-        let _depth5 = `${110 - (_mouseX - _w) * 0.025}% ${60 - (_mouseY - _h) * 0.025}%`;
+        let _depth3 = `${125 - (_mouseX - _w) * 0.0075}% ${25 - (_mouseY - _h) * 0.0075}%`;
+        let _depth4 = `${110 - (_mouseX - _w) * 0.03}% ${150 - (_mouseY - _h) * 0.07}%`;
+        let _depth5 = `${110 - (_mouseX - _w) * 0.05}% ${60 - (_mouseY - _h) * 0.02}%`;
         let x = `${_depth5}, ${_depth4}, ${_depth3}, ${_depth2}, ${_depth1}`;
         console.log(x);
         elem.style.backgroundPosition = x;
