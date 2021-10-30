@@ -68,6 +68,7 @@ a:hover {
 
 p {
   margin-bottom: 1em;
+  color: #555;
 }
 
 /* Work Page Layout */
@@ -77,7 +78,7 @@ p {
 }
 
 .portfolio {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 /* Defining the work page grid */
@@ -100,8 +101,7 @@ li {
 }
 
 .main-footer {
-  min-height: 100vh;
-  /* background: #111; */
+  height: 15vh;
 }
 
 .hero-header {
@@ -120,7 +120,6 @@ li {
 
 .hero {
   min-height: 100vh;
-  background: red;
 }
 
 
@@ -271,6 +270,8 @@ li {
 
 
 
+
+
 /* Project Page */
 
 .project-wrapper {
@@ -374,10 +375,6 @@ li {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
-  body {
-    background: rgb(253, 170, 212);
-  }
 
 
   .hero-footer,
@@ -493,9 +490,7 @@ li {
 
 /* Extra large devices (large laptops and desktops, 1200px and up)  */
 @media only screen and (min-width: 1200px) {
-  body {
-    background: rgb(98, 210, 218);
-  }
+
 
   .branding-navigation {
     display: flex;
