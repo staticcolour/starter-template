@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Hepta+Slab|Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 @import 'bourbon';
 
@@ -21,7 +21,7 @@ html {
 :root {
   --accent-color: #555;
   --body-typeface: "Nunito Sans", sans-serif;
-  --main-heading: "Barlow", sans-serif, thin;
+  --main-heading: "Barlow Semi Condensed", sans-serif;
 
 }
 
@@ -42,10 +42,10 @@ img {
 /* Typography */
 
 h1 {
-  font-size: 6em;
+  font-size: 4em;
   font-family: var(--main-heading);
-  margin-bottom: 0.2em;
-  color: white;
+  margin-bottom: 1rem;
+  color: #111;
 }
 
 .hero-headline {
@@ -68,7 +68,7 @@ a:hover {
 
 p {
   margin-bottom: 1em;
-  color: #555;
+  color: rgb(53, 53, 53);
 }
 
 /* Work Page Layout */
@@ -101,17 +101,46 @@ li {
   width: 100%;
 }
 
+
+
+
 .main-footer {
-  height: 15vh;
+  height: 10vh;
+  margin: auto;
+  padding: 0 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
 }
 
-.hero-header {
+
+.footer-socials {
+  padding: 1rem; 
+  border: indigo dotted;
+}
+
+
+.fa-lg {
+  color: #111;
+}
+
+.fa-lg:hover {
+  color: rgb(8, 189, 189);
+}
+
+
+
+
+.hero-header
+.hero-header-project {
   min-height: 10vh;
 }
 
 .hero-footer,
 .hero-header,
-.main-footer {
+.hero-header-project
+{
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -142,12 +171,12 @@ li {
 
   width:18rem;
   min-width: 15rem;
-  margin: 20vh 0 1rem 0;
+  margin: 20vh 0 3rem 0;
 }
 
 .icon {
-  width: 5rem; 
-  min-width: 5rem;
+  width: 4rem; 
+  min-width: 4rem;
 }
 
 .triangle {
@@ -166,7 +195,7 @@ li {
   min-width: 70vw;
   justify-content: space-between;
   flex-direction: row;
-  font-size: 18pt;
+  font-size: 16pt;
 }
 
 .menu-item {
@@ -244,7 +273,7 @@ li {
   transform-origin: center;
 }
 
-.social-media-icon {
+.ds {
   filter: drop-shadow(0 0 0.3rem black);
 }
 
@@ -367,7 +396,7 @@ li {
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 40px 45px;
+  padding: 20px 25px;
   margin-top: -50px;
   color: rgb(0, 0, 0);
   font-size: 30px;
@@ -399,43 +428,57 @@ li {
 
 
 
-/* Project Page */
+/* !!!!!!!!!!!!!!!!! Project Page */
+
+.hero-header-project {
+  background-color: #111;
+}
 
 .project-wrapper {
   display: flex;
   justify-content: space-between;
-  background: #111;
-  padding: 1em;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  border: red dotted;
 }
 
 .project-aside {
-  width: 35vw;
+  width: 25vw;
   height: 40vh;
   position: -webkit-sticky;
   position: sticky;
   top: 5vh;
   color: white;
   padding: 1em;
+  border: royalblue dashed;
+  text-align: center;
 }
 
 .project-navigation {
   display: flex;
   flex-direction: row;
+  border: green double;
 }
 
 .arrow {
   padding-right: 1em;
+  margin: auto;
 }
 
 .project-details {
-  width: 60vw;
-  min-height: 410vh;
-  background-image: linear-gradient(-225deg,
-      #d1ddee 0%,
-      #3c4280 50%,
-      #0d0a27 100%);
+  width: 70vw;
+  min-height: 80vh;
+ border:hotpink solid;
   padding: 1em;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -445,6 +488,24 @@ li {
 
 /* Large devices (ipad, 710px and up) */
 @media only screen and (min-width: 710px) {
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 40px 45px;
+  margin-top: -50px;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  transition: 0.3s ease;
+  border-radius: 50%;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
 
   .grid {
@@ -474,15 +535,15 @@ li {
 }
 
 .logo {
-  width:18rem;
-  min-width: 15rem;
+  width:15rem;
+  min-width: 13rem;
   margin-left: 100px;
-  margin: 0;
+  margin: 0.25rem 0 0 0;
 }
 
 .icon {
-  width: 4rem; 
-  min-width: 4rem;
+  width: 3rem; 
+  min-width: 3rem;
   margin-right: auto;
 }
 
@@ -545,6 +606,9 @@ li {
 @media only screen and (min-width: 992px) {
 
 
+
+
+  
   .portfolio {
     padding: 5rem;
   }
@@ -552,7 +616,7 @@ li {
 
   .hero-footer,
 .hero-header,
-.main-footer {
+.hero-header-project {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -569,13 +633,14 @@ li {
     margin: 1rem 0 0 0;
   }
   
+
   .logo {
-    width:25rem;
+    width:18rem;
     margin-left: 160px;
   }
   
   .icon {
-    width: 5rem; 
+    width: 3rem; 
     margin-right: auto;
   }
   
@@ -583,8 +648,11 @@ li {
     margin-left: auto;
     display: flex;
     flex-direction: row;
-    font-size: 16pt;
+    font-size: 14pt;
   }
+  
+
+
   
   .menu-item {
     justify-content: space-between;
@@ -622,11 +690,7 @@ li {
     transform: scale(1.1);
     transform-origin: center;
   }
-  
-  .social-media-icon {
-    filter: drop-shadow(0 0 0.3rem black);
-  }
-  
+
   
   .mailto-link {
     position: relative;
@@ -673,23 +737,6 @@ li {
     position: static;
     z-index: 1;
     margin: 1rem 0 0 0;
-  }
-  
-  .logo {
-    width:25rem;
-    margin-left: 160px;
-  }
-  
-  .icon {
-    width: 5rem; 
-    margin-right: auto;
-  }
-  
-  .header-links {
-    margin-left: auto;
-    display: flex;
-    flex-direction: row;
-    font-size: 16pt;
   }
   
   .menu-item {
