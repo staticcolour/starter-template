@@ -81,14 +81,7 @@ p {
   padding: 1rem;
 }
 
-/* Defining the work page grid */
-.grid {
-  display: grid;
-  grid-column: auto;
-  grid-template-columns: repeat(auto-fit, minmax(1fr));
-  grid-gap: 0.5rem;
-  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
-}
+
 
 
 li {
@@ -112,24 +105,31 @@ li {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap-reverse;
+  border: #14838a dashed;
 }
 
 
 .footer-socials {
   padding: 1rem; 
   border: indigo dotted;
+  
 }
 
 
 .fa-lg {
   color: #111;
+  
 }
 
 .fa-lg:hover {
   color: rgb(8, 189, 189);
 }
 
-
+.f-s-icon {
+  position: relative;
+  border: red dotted; 
+  margin: 1rem;
+}
 
 
 .hero-header
@@ -307,6 +307,61 @@ li {
 }
 
 
+/* Masonry grid */
+
+.wrapper {
+  margin: auto;
+  padding: 0.25em;
+  max-width: 90vw;
+}
+
+.masonry {
+  column-gap: 1rem;
+  column-fill: balance;
+}
+
+
+.text {
+  color: white;
+  font-size: 1.25em;
+  padding: 0.5em;
+}
+
+/* Masonry item */
+.masonry .brick {
+  position: relative;
+  margin-bottom: 1rem;
+  display: inline-flex; /* Fix the misalignment of items */
+  vertical-align: top; /* Keep the item on the very top */
+} 
+
+
+
+/* Masonry on tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) {
+  .desc {
+    font-size: 1.25em;
+  }
+
+  .intro {
+    letter-spacing: 1px;
+  }
+
+  .masonry {
+    column-count: 3;
+  }
+
+} 
+
+
+
 .home-gallery {
   cursor: zoom-in;
   overflow:hidden;
@@ -371,7 +426,7 @@ li {
 /* Hide the slides by default */
 .mySlides {
   display: none;
-  height: 85vh;
+  height: 80vh;
 }
 
 
@@ -508,14 +563,9 @@ li {
 }
 
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    grid-gap: 0.5rem;
-    /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
-  }
 
-  .triangle {
+
+.triangle {
     display: none;
   }
 
@@ -747,13 +797,7 @@ li {
   
 } 
 
-/* Extra extra large devices (huge desktops, 2000px and up)  */
-@media only screen and (min-width: 2000px) {
 
- 
-
-
-} 
 
 
 
