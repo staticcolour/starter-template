@@ -99,37 +99,62 @@ li {
 
 .main-footer {
   height: 10vh;
-  margin: auto;
-  padding: 0 5rem;
+  margin: 1rem 0 3rem 0;
+  padding: 4rem 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap-reverse;
-  border: #14838a dashed;
+  flex-direction: column;
 }
 
-
-.footer-socials {
-  padding: 1rem; 
-  border: indigo dotted;
+.footer-box p {
+  margin-bottom: 0em;
   
 }
 
+.footer-box {
+  margin: 1rem 0rem
+}
+
+.main-footer .grow {
+  transition: none;
+  margin: 0 1rem;
+}
+
+.main-footer .grow:hover {
+  transform: none;
+  transform-origin: none;
+}
 
 .fa-lg {
   color: #111;
-  
 }
 
 .fa-lg:hover {
   color: rgb(8, 189, 189);
 }
 
-.f-s-icon {
-  position: relative;
-  border: red dotted; 
-  margin: 1rem;
+
+.main-footer .mailto-message {
+  top: 28px;
+  left: 130px;
+  transform: translate(-50%, -100%);
+  position: absolute;
+  display: none;
+  width: auto;
+  white-space: nowrap;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 2px;
 }
+
+
+
+
+
+
 
 
 .hero-header
@@ -362,6 +387,10 @@ li {
 
 
 
+
+
+
+
 .home-gallery {
   cursor: zoom-in;
   overflow:hidden;
@@ -485,49 +514,225 @@ li {
 
 /* !!!!!!!!!!!!!!!!! Project Page */
 
+
+/* project header */
+
+
 .hero-header-project {
   background-color: #111;
 }
 
-.project-wrapper {
+.hero-header-project .branding-navigation {
   display: flex;
-  justify-content: space-between;
-  background: rgb(255, 255, 255);
-  padding: 2rem;
-  border: red dotted;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  z-index: 1;
+  margin: 1rem 0;
 }
 
+.hero-header-project .logo {
+
+  width:15rem;
+  min-width: 13rem;
+  margin: 2rem 0 1rem;
+}
+
+.hero-header-project .icon {
+  width: 3rem; 
+  min-width: 3rem;
+}
+
+
+.hero-header-project .header-links {
+  margin-top: 2vh;
+  display: flex;
+  min-width: 70vw;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: 16pt;
+}
+
+.hero-header-project .menu-item {
+  padding: 0 1rem;
+  align-items: center;
+  
+}
+
+
+/* project content */
+
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  align-content: center;
+}
+
+
+
 .project-aside {
-  width: 25vw;
-  height: 40vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 5vh;
+  width: 80vw;
+  min-height: 30vh;
+  position: relative;
+  margin: auto;
+  top: 0vh;
   color: white;
   padding: 1em;
-  border: royalblue dashed;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  justify-content: center;
+}
+
+.project-aside h1 {
+  font-size: 3rem;
+}
+
+.project-aside p {
+  padding: 0 0.5rem;
 }
 
 .project-navigation {
   display: flex;
   flex-direction: row;
-  border: green double;
+  padding: 3rem 0 0 0;
+  justify-content: space-between;
 }
 
-.arrow {
-  padding-right: 1em;
+.project-desc {
   margin: auto;
 }
 
+.arrow {
+  padding: 0rem 1rem;
+}
+
 .project-details {
-  width: 70vw;
+  width: 100%;
   min-height: 80vh;
- border:hotpink solid;
-  padding: 1em;
+  margin: auto;
+  padding: 0;
+}
+
+.project-details img{
+  display: block;
+  width: 100%;
+  margin:1rem auto;
+}
+
+.extra-space {
+  height: 1rem;
+}
+
+.extra-space-2 {
+  height: 5rem;
 }
 
 
+/*??????????? portfolio page*/
+
+
+
+.projects {
+  padding: 5rem;
+}
+
+.projects img {
+  
+  transition: 0.2s ease-in-out;
+}
+
+.projects img:hover {
+  
+  filter: grayscale(50%) brightness(0.75);
+  transition: 0.2s ease-in-out;
+}
+
+.projects-box {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+.projects-text:hover {
+  opacity: 0.5;
+  background-color: black;
+}
+
+.text {
+  color: white;
+  font-size: 1.25em;
+  padding: 0.5em;
+}
+
+.projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-gap: 1rem;
+  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
+}
+
+hr {
+  color: #c7c7c7;
+  border: 1px solid;
+}
+
+
+/* @@@@@@@@@@@@@@@@@ About me */
+
+.about {
+  padding: 1rem;
+  min-height: 85vh;
+}
+
+
+.about-me {
+    padding: 1rem;
+}
+
+.about-content {
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80vw;
+  margin: 2rem auto;
+
+}
+
+.self-portrait {
+  width: 80vw;
+  margin: auto;
+}
+
+.self-portrait p {
+  text-align: center;
+  margin: 1rem;
+}
+
+
+.about-txt {
+  width: 75vw;
+  font-size: 14pt;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+
+}
 
 
 
@@ -544,6 +749,47 @@ li {
 /* Large devices (ipad, 710px and up) */
 @media only screen and (min-width: 710px) {
 
+  /* @@@@@@@@@@@@@@@@@ About me */
+
+.about {
+  padding: 1rem;
+  min-height: 85vh;
+}
+
+
+.about-me {
+    padding: 2rem;
+}
+
+.about-content {
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80vw;
+  margin: 2rem auto;
+
+}
+
+.self-portrait {
+  width: 60vw;
+  margin: auto;
+}
+
+.self-portrait p {
+  text-align: center;
+  margin: 1rem;
+}
+
+
+.about-txt {
+  width: 75vw;
+  font-size: 14pt;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+
+}
 
 /* Next & previous buttons */
 .prev,
@@ -616,6 +862,44 @@ li {
   margin: 0 1rem;
 }
 
+
+
+.hero-header-project .branding-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  z-index: 1;
+  margin: 1rem 0 0 0;
+}
+
+.hero-header-project .logo {
+  width:15rem;
+  min-width: 13rem;
+  margin: 0.25rem 0 0 220px;
+}
+
+
+.hero-header-project .icon {
+  width: 3rem; 
+  min-width: 3rem;
+  margin-right: auto;
+}
+
+.hero-header-project .header-links {
+  margin-left: auto;
+  margin-top: 0vh;
+  min-width: 0vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  font-size: 16pt;
+  position:static;
+}
+
+
+
 .footer-navigation {
   display: flex;
   flex-direction: row;
@@ -652,8 +936,117 @@ li {
   opacity: 0.6;
 }
 
+
+.main-footer {
+  height: 5vh;
+  margin: auto;
+  padding: 0rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.footer-box p {
+  margin-bottom: 0em;
+}
+
+.main-footer .grow {
+  transition: none;
+  margin: 0 2rem 0rem 0rem;
+}
+
+.main-footer .grow:hover {
+  transform: none;
+  transform-origin: none;
+}
+
+.fa-lg {
+  color: #111;
+}
+
+.fa-lg:hover {
+  color: rgb(8, 189, 189);
+}
+
+
+.main-footer .mailto-message {
+  top: 28px;
+  left: 130px;
+  transform: translate(-50%, -100%);
+  position: absolute;
+  display: none;
+  width: auto;
+  white-space: nowrap;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+
+
+  .about {
+    padding: 1rem;
+    min-height: 85vh;
+  }
+  
+  
+  .about-me {
+      padding: 2rem;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    margin: 2rem auto;
+  
+  }
+  
+  .self-portrait {
+    width: 20vw;
+    min-width: 400px;
+    margin: 2rem 1rem 0 auto;
+  }
+  
+  .self-portrait p {
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  
+  .about-txt {
+    width: 25vw;
+    font-size: 12pt;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 1rem;
+    margin: 5rem auto 0 2rem;
+  }
+  
+
+
+
+
+
+
+
 
 
 
@@ -771,6 +1164,72 @@ li {
   }
 
 
+  .project-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    background: rgb(255, 255, 255);
+    padding: 1rem;
+  }
+
+
+  .project-aside {
+    width: 25vw;
+    height: 40vh;
+    margin:0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5vh;
+    color: white;
+    padding: 2em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  
+  .project-navigation {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom:0;
+    padding: 3rem 0 0 0;
+  }
+
+  .project-details {
+    width: 72vw;
+    min-height: 100vh;
+    padding: 1em;
+    margin: 0;
+} 
+
+.project-details img{
+  display: block;
+  margin:1rem auto;
+}
+
+.project-desc {
+
+  margin: 0 auto;
+}
+
+
+
+
+
+
+/* ddddd */
+
+
+
+
+
+}
+
+
+
 
 
 
@@ -794,7 +1253,55 @@ li {
     padding: 0 2rem;
     align-items: center;
   }
+
+ /*@@@@@@@ */
+
+  .about {
+    padding: 1rem;
+    min-height: 85vh;
+  }
   
+  
+  .about-me {
+      padding: 2rem;
+  }
+  
+  .about-content {
+    display: flex;
+    width: 70vw;
+    margin: 2rem auto;
+  
+  }
+  
+  .self-portrait {
+    width: 20vw;
+    min-width: 400px;
+    margin: 2rem 1rem 0 auto;
+  }
+  
+  .self-portrait p {
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  
+  .about-txt {
+    width: 25vw;
+    font-size: 14pt;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 1rem;
+    margin: 5rem auto 0 2rem;
+  }
+  
+
+
+
+
+
+
 } 
 
 
@@ -802,4 +1309,4 @@ li {
 
 
 
-}}
+}

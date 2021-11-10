@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>StaticColour's Portfolio</title>
+  <title>StaticColour</title>
   <link rel="icon" href="./assets/tin-trinh-staticcolour--favicon--word-mark-icon.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='./script.js'></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z33B548MB"></script>
 <script>
@@ -27,18 +28,41 @@
 
 
 <section class="hero">
-    
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>StaticColour</title>
+  <link rel="icon" href="./assets/tin-trinh-staticcolour--favicon--word-mark-icon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src='./script.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z33B548MB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8Z33B548MB');
+</script>
+</head>
+
       <div class="parallax">
-        <div id="color-overlay"></div>
         <script src='./script.js'></script>
+        <div id="color-overlay"></div>
         <header class="hero-header">
           <ul class="branding-navigation">
             <li><div class=triangle></div></li>
             <li class="icon"><a href="index.html"><img src="./assets/logowhite.png" /></a></li>
             <li class="logo"><a href="index.html"><img src="./assets/staticcolour--typography-logo.png" /></a></li>
             <div class="header-links">
-              <li class="menu-item"><a href="#">Portfolio</a></li>
-              <li class="menu-item"><a href="#">About</a></li>
+              <li class="menu-item"><a href="/portfolio.html">Portfolio</a></li>
+              <li class="menu-item"><a href="/about.html">About</a></li>
             </div>
           </ul>
     </header>
@@ -189,15 +213,16 @@
   </main>
 
 
+  
   <footer>
     <div class="main-footer">
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/staticcolour/"><i class="social-media-icon fab fa-instagram fa-lg"></i></a>
-          <a href="https://twitter.com/staticcolour"><i class="social-media-icon fab fa-twitter fa-lg"></i></a>
-          <a href="mailto:staticcolour@gmail.com"><i class="social-media-icon fas fa-envelope fa-lg"></i></a>
+        <div class="footer-socials footer-box">
+          <a href="https://www.instagram.com/staticcolour/"><i class="social-media-icon fab fa-instagram fa-lg grow"></i></a>
+          <a href="https://twitter.com/staticcolour"><i class="social-media-icon fab fa-twitter fa-lg grow"></i></a>
+          <a href="mailto:staticcolour@gmail.com"><i class="social-media-icon fas fa-envelope fa-lg grow"></i></a>
         </div>
-        <p><a class="scroll-text footer-text" href="#top">Back to top</a></p>
-        <p>&copy; 2021 StaticColour</p>
+        <div class="footer-box"><p><a class="scroll-text footer-text" href="#top">Back to top</a></p></div>
+        <div class="footer-box"><p>&copy; 2021 StaticColour</p></div>
       </div>
   </footer>
 </body>
