@@ -478,9 +478,9 @@ li {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 100%;
   width: auto;
-  padding: 20px 25px;
+  padding: 15px 20px;
   margin-top: -50px;
   color: rgb(0, 0, 0);
   font-size: 30px;
@@ -636,7 +636,146 @@ li {
 }
 
 
+
+.project-container {
+  position: relative;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .2s ease;
+  background-color: rgba(0,0,0,.6);
+}
+
+.project-container:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-text {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
 /*??????????? portfolio page*/
+
+.page-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.feedback-txt {
+  position: relative;
+  margin: auto;
+  font-size: 16pt;
+  color: #fff;
+
+}
+
+.feedback-btn {
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 50px;
+  background-color: #009491;
+  margin: 0 0 0 auto;
+}
+
+.feedback-btn:before,
+.feedback-btn:after {
+  content: " ";
+  position: absolute;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+
+.feedback-btn:before {
+  left: 100%;
+  border-left: 25px solid #009491;
+}
+
+
+
+.projects-btn {
+  position: relative;
+  display: flex;
+  width: 200px;
+  height: 50px;
+  background-color: #009491;
+  margin: 0 auto 0 0;
+}
+
+.projects-btn:before,
+.projects-btn:after {
+  content: " ";
+  position: absolute;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+
+
+.projects-btn:after {
+  right: 100%;
+  border-right: 25px solid #009491;
+}
+
+
+
+
+
+
+.back-to-projects {
+  position: relative;
+  display: flex;
+  width: 150px;
+  height: 40px;
+  background-color: #009491;
+  margin: 0 auto 3rem 0;
+}
+
+.back-to-projects:before,
+.back-to-projects:after {
+  content: " ";
+  position: absolute;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+
+.back-to-projects:after {
+  right: 100%;
+  border-right: 20px solid #009491;
+}
+
+.back-to-projects-txt {
+  position: relative;
+  margin: auto;
+  font-size: 12pt;
+  color: #fff;
+
+}
+
 
 
 
@@ -649,11 +788,7 @@ li {
   transition: 0.2s ease-in-out;
 }
 
-.projects img:hover {
-  
-  filter: grayscale(50%) brightness(0.75);
-  transition: 0.2s ease-in-out;
-}
+
 
 .projects-box {
   transition: .5s ease;
@@ -735,9 +870,32 @@ hr {
 }
 
 
+.page-not-found {
+  background-color: rgb(255, 255, 255);
+}
 
+.error-page {
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+}
 
+.error-page h1 {
+  font-size: 86pt;
+  font-weight: bold;
+  color: #009491;
+  
+}
 
+.error-page h2 {
+  font-size: 20pt;
+  color: rgb(10, 10, 10);
+  margin-bottom: 1rem;
+}
+
+.error-page p {
+  line-height: 1.25rem;
+}
 
 
 
@@ -796,9 +954,9 @@ hr {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 105%;
   width: auto;
-  padding: 40px 45px;
+  padding: 20px 25px;
   margin-top: -50px;
   color: rgb(0, 0, 0);
   font-size: 30px;
@@ -1180,7 +1338,7 @@ hr {
     margin:0;
     position: -webkit-sticky;
     position: sticky;
-    top: 5vh;
+    top: 0vh;
     color: white;
     padding: 2em;
     text-align: left;
@@ -1297,7 +1455,22 @@ hr {
   }
   
 
-
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px 25px;
+  margin-top: -50px;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  transition: 0.3s ease;
+  border-radius: 50%;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
 
 

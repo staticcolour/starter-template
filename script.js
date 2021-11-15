@@ -23,20 +23,20 @@
 })();
 
 jQuery(document).ready(function($) {
-    var alterClass = function() {
-      var ww = document.body.clientWidth;
-      if (ww < 991) {
-        $('.parallax').removeClass('desktop');
-      } else if (ww >= 992) {
-        $('.parallax').addClass('desktop');
-      };
+  var alterClass = function() {
+    var ww = document.body.clientWidth;
+    if (ww < 991) {
+      $('.parallax').removeClass('desktop');
+    } else if (ww >= 992) {
+      $('.parallax').addClass('desktop');
     };
-    $(window).resize(function(){
-      alterClass();
-    });
-    //Fire it when the page first loads:
+  };
+  $(window).resize(function(){
     alterClass();
   });
+  //Fire it when the page first loads:
+  alterClass();
+});
 
 //mait to
 
@@ -44,12 +44,13 @@ $(document).ready(function() {
 	
 	// Add class to mailto link
 	// Needed to separate the disabling of the default action AND copy email to clipboard
-	$('a[href^=mailto]').addClass('mailto-link');
+
+  $('a[href^=mailto]').addClass('mailto-link');
 
 	var mailto = $('.mailto-link');
 	var messageCopy = 'Click to copy email address';
 	var messageSuccess = 'Email address copied to clipboard';
-	
+  
 	mailto.append('<span class="mailto-message"></span>');
 	$('.mailto-message').append(messageCopy);
 	
