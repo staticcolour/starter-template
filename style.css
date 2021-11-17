@@ -171,6 +171,7 @@ li {
   flex-direction: column;
   padding: 1rem 2rem;
   text-align: center;
+
 }
 
 .hero {
@@ -240,11 +241,11 @@ li {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(./assets/header/3-hand.png),
-    url(./assets/header/4-sparkle.png),
-    url(./assets/header/2-person-v2.png),
-    url(./assets/header/1-stars-only.png),
-    url(./assets/header/1-back-no-star.jpg);
+  background-image: url(./assets/header/staticcolour-tin-trinh--stars--parallax-image-illustration-hand.png),
+    url(./assets/header/staticcolour-tin-trinh--stars--parallax-image-illustration-sparkle.png),
+    url(./assets/header/staticcolour-tin-trinh--stars--parallax-image-illustration-figure.png),
+    url(./assets/header/staticcolour-tin-trinh--stars--parallax-image-illustration-stars.png),
+    url(./assets/header/staticcolour-tin-trinh--stars--parallax-image-illustration-background.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 95%, 85%, 80%, 110%, cover;
@@ -254,7 +255,7 @@ li {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(./assets/header/mobile.jpg);
+  background-image: url(./assets/header/staticcolour-tin-trinh--stars--parallax-image-illustration-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -530,6 +531,7 @@ li {
   position: static;
   z-index: 1;
   margin: 1rem 0;
+  
 }
 
 .hero-header-project .logo {
@@ -543,7 +545,6 @@ li {
   width: 3rem; 
   min-width: 3rem;
 }
-
 
 .hero-header-project .header-links {
   margin-top: 2vh;
@@ -608,6 +609,12 @@ li {
 
 .project-desc {
   margin: auto;
+}
+
+.project-desc h1 {
+  text-transform: uppercase;
+  line-height: normal;
+  margin: 0 0 2rem 0;
 }
 
 .arrow {
@@ -688,7 +695,7 @@ li {
 .feedback-txt {
   position: relative;
   margin: auto;
-  font-size: 16pt;
+  font-size: 14pt;
   color: #fff;
 
 }
@@ -696,23 +703,23 @@ li {
 .feedback-btn {
   position: relative;
   display: flex;
-  width: 200px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   background-color: #009491;
-  margin: 0 0 0 auto;
+  margin: 0 1rem 4rem auto;
 }
 
 .feedback-btn:before,
 .feedback-btn:after {
   content: " ";
   position: absolute;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
 }
 
 .feedback-btn:before {
   left: 100%;
-  border-left: 25px solid #009491;
+  border-left:20px solid #009491;
 }
 
 
@@ -720,26 +727,25 @@ li {
 .projects-btn {
   position: relative;
   display: flex;
-  width: 200px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   background-color: #009491;
-  margin: 0 auto 0 0;
+  margin: 0 auto 4rem 1rem;
 }
 
 .projects-btn:before,
 .projects-btn:after {
   content: " ";
   position: absolute;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
 }
 
 
 .projects-btn:after {
   right: 100%;
-  border-right: 25px solid #009491;
+  border-right:20px solid #009491;
 }
-
 
 
 
@@ -756,21 +762,22 @@ li {
 
 .back-to-projects:before,
 .back-to-projects:after {
-  content: " ";
+  content:" ";
   position: absolute;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
+  
 }
-
 
 .back-to-projects:after {
   right: 100%;
   border-right: 20px solid #009491;
+  
 }
 
 .back-to-projects-txt {
   position: relative;
-  margin: auto;
+  margin: 0.5rem auto;
   font-size: 12pt;
   color: #fff;
 
@@ -780,12 +787,13 @@ li {
 
 
 .projects {
-  padding: 5rem;
+  padding: 1rem;
+  position: relative;
 }
 
-.projects img {
-  
+.projects img { 
   transition: 0.2s ease-in-out;
+
 }
 
 
@@ -816,7 +824,7 @@ li {
 
 .projects .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(1fr));
   grid-gap: 1rem;
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
@@ -907,6 +915,74 @@ hr {
 /* Large devices (ipad, 710px and up) */
 @media only screen and (min-width: 710px) {
 
+
+  .projects .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-gap: 1rem;
+    /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
+  }
+
+
+  .projects {
+    padding: 3rem;
+  }
+  
+  .feedback-txt {
+    position: relative;
+    margin: auto;
+
+    color: #fff;
+  
+  }
+  
+  .feedback-btn {
+    position: relative;
+    display: flex;
+
+    background-color: #009491;
+    margin: 0 0 2rem auto;
+  }
+  
+  .feedback-btn:before,
+  .feedback-btn:after {
+    content: " ";
+    position: absolute;
+
+  }
+  
+  .feedback-btn:before {
+    left: 100%;
+
+  }
+  
+  
+  
+  .projects-btn {
+    position: relative;
+    display: flex;
+
+    background-color: #009491;
+    margin: 0 auto 2rem 0;
+  }
+  
+  .projects-btn:before,
+  .projects-btn:after {
+    content: " ";
+    position: absolute;
+
+  }
+  
+  
+  .projects-btn:after {
+    right: 100%;
+
+  }
+
+
+
+
+
   /* @@@@@@@@@@@@@@@@@ About me */
 
 .about {
@@ -974,7 +1050,7 @@ hr {
   }
 
 
-.portfolio {
+.portfolio{
   padding: 3rem;
 }
 
@@ -988,11 +1064,12 @@ hr {
   margin: 1rem 0 0 0;
 }
 
+
+
 .logo {
   width:15rem;
   min-width: 13rem;
-  margin-left: 100px;
-  margin: 0.25rem 0 0 0;
+  margin: 0.25rem 0 0 100px;
 }
 
 .icon {
@@ -1035,7 +1112,8 @@ hr {
 .hero-header-project .logo {
   width:15rem;
   min-width: 13rem;
-  margin: 0.25rem 0 0 220px;
+  margin: 0.25rem 0 0 100px;
+  
 }
 
 
@@ -1077,7 +1155,7 @@ hr {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(./assets/header/tablet.jpg);
+  background-image: url(./assets/header/staticcolour-tin-trinh--stars--parallax-image-illustration-tablet.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1157,6 +1235,56 @@ hr {
 
 
 
+  .feedback-btn {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    background-color: #009491;
+    margin: 0 0 0 auto;
+  }
+  
+  
+
+  .feedback-btn:before,
+  .feedback-btn:after {
+    content: " ";
+    position: absolute;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+  }
+  
+  .feedback-btn:before {
+    left: 100%;
+    border-left:25px solid #009491;
+  }
+  
+
+  
+  .projects-btn:before,
+  .projects-btn:after {
+    content: " ";
+    position: absolute;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+  }
+  
+  
+  .projects-btn:after {
+    right: 100%;
+    border-right:25px solid #009491;
+  }
+
+  .projects-btn {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    background-color: #009491;
+    margin: 0 auto 0 0;
+  }
+
+
   .about {
     padding: 1rem;
     min-height: 85vh;
@@ -1207,7 +1335,9 @@ hr {
 
 
 
-
+  .projects {
+    padding: 5rem;
+  }
 
   
   .portfolio {
