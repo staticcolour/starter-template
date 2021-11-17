@@ -916,6 +916,7 @@ hr {
 @media only screen and (min-width: 710px) {
 
 
+  
   .projects .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
@@ -1232,6 +1233,8 @@ hr {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+
 
 
 
@@ -1607,9 +1610,37 @@ hr {
 
 } 
 
+/*(992px and up) */
+@media only screen and (min-width: 991px) {
+  .parallax.desktop {
+    max-height: 595px;
+  }
+}
+/*(1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .parallax.desktop {
+    max-height: 720px;
+  }
+}
+/*(1600px and up) */
+@media only screen and (min-width: 1600px) {
+  .parallax.desktop {
+    max-height: 950px;
+  }
+}
+/*(1980px and up) */
+@media only screen and (min-width: 1980px) {
+  .parallax.desktop {
+    max-height: 1226px;
+  }
 
+}
+/*(2000px and up) */
+@media only screen and (min-width: 2000px) {
+  .parallax.desktop {
+    max-height: none;
+  }
 
-
-
+}
 
 }
