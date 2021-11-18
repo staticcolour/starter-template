@@ -1606,9 +1606,10 @@ hr {
 }
 
 
-
-
 } 
+
+
+/* for parallax other aspect ratios */
 
 /*(992px and up) */
 @media only screen and (min-width: 991px) {
