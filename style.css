@@ -859,16 +859,19 @@ hr {
   width: 80vw;
   margin: 2rem auto;
 
+
 }
 
 .self-portrait {
   width: 80vw;
   margin: auto;
+ 
 }
 
 .self-portrait p {
   text-align: center;
   margin: 1rem;
+
 }
 
 
@@ -1634,7 +1637,7 @@ hr {
     flex-direction: column;
     margin-right: auto;
     margin-left: 1rem;
-    margin: 5rem auto 0 2rem;
+    margin: 2rem auto 0 2rem;
   }
   
 
