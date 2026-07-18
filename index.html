@@ -1,201 +1,134 @@
-   <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>StaticColour</title>
+    <link
+      rel="icon"
+      href="./assets/tin-trinh-staticcolour--favicon--word-mark-icon.png"
+      type="image/png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="description"
+      content="Art of StaticColour. Digital illustrations and paintings."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/d300c2ea15.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8Z33B548MB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8">
-  <title>StaticColour</title>
-  <link rel="icon" href="./assets/tin-trinh-staticcolour--favicon--word-mark-icon.png" type="image/png">
-  <meta name="twitter:card" content="summary"/>
-  <meta name="description" content="Art of StaticColour. Digital illustrations and paintings."/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8Z33B548MB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      gtag("config", "G-8Z33B548MB");
+    </script>
+  </head>
 
-  gtag('config', 'G-8Z33B548MB');
-</script>
-</head>
+  <body>
+    <section class="parallax">
+      <div id="color-overlay"></div>
+      <header class="hero-header">
+        <ul class="branding-navigation">
+          <li><div class="triangle"></div></li>
+          <li class="icon">
+            <a href="index.html"
+              ><img src="./assets/staticcolour--typography-logo-icon.png"
+            /></a>
+          </li>
+          <li class="logo">
+            <a href="index.html"
+              ><img src="./assets/staticcolour--typography-logo-wordmark.png"
+            /></a>
+          </li>
+          <div class="header-links">
+            <li class="menu-item"><a href="/portfolio.html">Portfolio</a></li>
+            <li class="menu-item"><a href="/about.html">About</a></li>
+          </div>
+        </ul>
+      </header>
 
-      <div class="parallax">
-        <script src='./script.js'></script>
-        <div id="color-overlay"></div>
-        <header class="hero-header">
-          <ul class="branding-navigation">
-            <li><div class=triangle></div></li>
-            <li class="icon"><a href="index.html"><img src="./assets/staticcolour--typography-logo-icon.png" /></a></li>
-            <li class="logo"><a href="index.html"><img src="./assets/staticcolour--typography-logo-wordmark.png" /></a></li>
-            <div class="header-links">
-              <li class="menu-item"><a href="/portfolio.html">Portfolio</a></li>
-              <li class="menu-item"><a href="/about.html">About</a></li>
+      <footer class="hero-footer">
+        <ul class="footer-navigation">
+          <div class="social-media-menu">
+            <div class="grow">
+              <a href="https://www.instagram.com/staticcolour/"
+                ><i class="social-media-icon ds fab fa-instagram fa-2x"></i
+              ></a>
             </div>
-          </ul>
-    </header>
-
-    <footer class="hero-footer">
-      <ul class="footer-navigation">
-       <div class="social-media-menu">
-          <div class="grow"><a href="https://www.instagram.com/staticcolour/"><i class="social-media-icon ds fab fa-instagram fa-2x"></i></a></div>
-          <div class="grow"><a href="https://twitter.com/staticcolour"><i class="social-media-icon ds fab fa-twitter fa-2x"></i></a></div>
-           <div class="grow"><a href="mailto:staticcolour@gmail.com"><i class="social-media-icon ds fas fa-envelope fa-2x"></i></a></div>
-       </div>
-      </ul>
-      </div>
-    </footer>
-  </section>
-
-
-
-<main class="work-wrapper">
-  <section class="portfolio">
-    <ul class="grid masonry">
-      <li>
-          <figure class="home-gallery brick">
-            <img src="./image-assets/portfolio/staticcolour-tin-trinh--starweaver--fantasy-illustration-character-concept-art.jpg" class="masonry-content" alt="Starweaver. A blue woman surrounded by stars." onclick="openModal();currentSlide(1)">
-          </figure>
-      </li>
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/portfolio/staticcolour-tin-trinh--family-of-travelers--illustration-fanart-final-fantasy-ffxiv.jpg" class="masonry-content" alt="From Final Fantasy 14. A family riding a carriage." onclick="openModal();currentSlide(2)">
-        </figure>
-      </li>
-
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/portfolio/staticcolour-tin-trinh--our-place-in-space--illustration-poster-hr-macmillan-space-centre.jpg" class="masonry-content" alt="A girl standing on an open glass box holding a star." onclick="openModal();currentSlide(3)">
-        </figure>
-      </li>
-
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/home-thumbnails/staticcolour-tin-trinh--boat-adventure--illustration-fantasy-ocean-thumbnail.jpg" class="masonry-content" alt="A boat carrying three people in a green sea." onclick="openModal();currentSlide(4)">
-        </figure>
-      </li>
-
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/portfolio/staticcolour-tin-trinh--hyacinthus--illustration-greek-mythology-flower.jpg" class="masonry-content" alt="Portrait of Hyacinthus holding flowers." onclick="openModal();currentSlide(5)">
-        </figure>
-      </li>
-
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/portfolio/staticcolour-tin-trinh--pay-up--illustration-character-video-game-mercenary-concept-art.jpg" class="masonry-content" alt="A man leaning on a motorcycle holding a coin in one hand and a bag in the other." onclick="openModal();currentSlide(6)">
-        </figure>
-      </li>
-
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/portfolio/staticcolour-tin-trinh--identity--illustration-flower-eyes-poster.jpg" class="masonry-content" alt="Three figures drawn overlapping and mashed together with leaves and flowers." onclick="openModal();currentSlide(7)">
-        </figure>
-      </li>
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/portfolio/staticcolour-tin-trinh--rose--illustration-fanart-final-fantasy-ffxiv-elezen.jpg" class="masonry-content" alt="An elf with dark skin and white hair wearing a rose eye." onclick="openModal();currentSlide(8)">
-        </figure>
-      </li>
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/portfolio/staticcolour-tin-trinh--astral-stasis--illustration-fanart-urianger-final-fantasy-ffxiv-elezen.jpg" class="masonry-content" alt="Urianger from Final Fantasy 14." onclick="openModal();currentSlide(9)">
-        </figure>
-      </li>
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/portfolio/staticcolour-tin-trinh--Aurelia--illustration-character-portrait.jpg" class="masonry-content" alt="A girl with pink hair." onclick="openModal();currentSlide(10)">
-        </figure>
-      </li>
-      <li>
-        <figure class="home-gallery brick">
-          <img src="./image-assets/portfolio/staticcolour-tin-trinh--forget-me-not--illustration-character-flowers.jpg" class="masonry-content" alt="A boy half submerged in water surrounded by forget-me-nots." onclick="openModal();currentSlide(11)">
-        </figure>
-      </li>
-    </ul>
-
-      <!-- The Modal/Lightbox -->
-
-
-      <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--starweaver--fantasy-illustration-character-concept-art.jpg" style="width:100%">
+            <div class="grow">
+              <a href="https://twitter.com/staticcolour"
+                ><i class="social-media-icon ds fab fa-twitter fa-2x"></i
+              ></a>
+            </div>
+            <div class="grow">
+              <a href="mailto:staticcolour@gmail.com"
+                ><i class="social-media-icon ds fas fa-envelope fa-2x"></i
+              ></a>
+            </div>
           </div>
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--family-of-travelers--illustration-fanart-final-fantasy-ffxiv.jpg" style="width:100%">
-          </div>
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--our-place-in-space--illustration-poster-hr-macmillan-space-centre.jpg" style="width:100%">
-          </div>
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--boat-adventure--illustration-fantasy-ocean.jpg" style="width:100%">
-          </div>
-  
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--hyacinthus--illustration-greek-mythology-flower.jpg" style="width:100%">
-          </div>
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--pay-up--illustration-character-video-game-mercenary-concept-art.jpg" style="width:100%">
-          </div>
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--identity--illustration-flower-eyes-poster.jpg" style="width:100%">
-          </div>
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--rose--illustration-fanart-final-fantasy-ffxiv-elezen.jpg" style="width:100%">
-          </div>
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--astral-stasis--illustration-fanart-urianger-final-fantasy-ffxiv-elezen.jpg" style="width:100%">
-          </div>
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--Aurelia--illustration-character-portrait.jpg" style="width:100%">
-          </div>
-  
-          <div class="mySlides">
-            <img class="modalimg" src="./image-assets/portfolio/staticcolour-tin-trinh--forget-me-not--illustration-character-flowers.jpg" style="width:100%">
-          </div>
-
-
-    <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- Caption text -->
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-
+        </ul>
+      </footer>
     </section>
-  </main>
 
+    <main class="work-wrapper">
+      <section class="portfolio">
+        <ul id="artworkBox" class="grid masonry"></ul>
 
-  
-  <footer>
-    <div class="main-footer">
-        <div class="footer-socials footer-box">
-          <a href="https://www.instagram.com/staticcolour/"><i class="social-media-icon fab fa-instagram fa-lg grow"></i></a>
-          <a href="https://twitter.com/staticcolour"><i class="social-media-icon fab fa-twitter fa-lg grow"></i></a>
-          <a href="mailto:staticcolour@gmail.com"><i class="social-media-icon fas fa-envelope fa-lg grow"></i></a>
+        <!-- The Modal/Lightbox -->
+
+        <div id="myModal" class="modal" tabindex="0">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content" id="modalBox"></div>
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <!-- Caption text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
         </div>
-        <div class="footer-box"><p><a class="scroll-text footer-text" href="#top">Back to top</a></p></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="main-footer">
+        <div class="footer-socials footer-box">
+          <a href="https://www.instagram.com/staticcolour/"
+            ><i class="social-media-icon fab fa-instagram fa-lg grow"></i
+          ></a>
+          <a href="https://twitter.com/staticcolour"
+            ><i class="social-media-icon fab fa-twitter fa-lg grow"></i
+          ></a>
+          <a href="mailto:staticcolour@gmail.com"
+            ><i class="social-media-icon fas fa-envelope fa-lg grow"></i
+          ></a>
+        </div>
+
+        <div class="footer-box">
+          <p>
+            <a class="scroll-text footer-text" href="#top">Back to top</a>
+          </p>
+        </div>
         <div class="footer-box"><p>&copy; 2021 StaticColour</p></div>
       </div>
-  </footer>
-</body>
-
+    </footer>
+    <script src="./scripts/artwork.js"></script>
+    <script src="./scripts/home.js"></script>
+  </body>
 </html>
